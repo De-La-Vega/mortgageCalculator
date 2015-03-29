@@ -126,8 +126,12 @@
 			sliderSelectorVal
 				.val(sliderSelector.slider('value').toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "))
 				.change(function(){
-					var newVal = sliderSelectorVal.val().toString().replace(/\s/g, '');;
-					sliderSelector.slider("value", newVal);
+					if (!isNaN($(this).val())) {
+						var newVal = sliderSelectorVal.val().toString().replace(/\s/g, '');
+						sliderSelector.slider("value", newVal);
+					} else {
+						sliderSelector.slider("value", valCurrent != null ? valCurrent : Math.floor(valMin + (valMax-valMin)/2));
+					}
 				});
 		},
 
