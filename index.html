@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Ипотечный калькулятор</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" />
+
+	<style>
+		.row { margin-bottom: 0.5em;}
+	</style>
+</head>
+
+<body>
+
+<div class="container container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="page-header">Ипотечный калькулятор</h1>
+		</div>
+	</div>
+
+	<div class="calc_init">
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="row">
+					<div class="col-sm-7"><p class="form-control-static">Стоимость квартиры, руб.</p></div>
+					<div class="col-sm-5"><input type="text" class="form-control apartment_price-input"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12"><div class="apartment_price-slider"></div></div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="row">
+					<div class="col-sm-7"><p class="form-control-static">Первоначальный взнос, руб.</p></div>
+					<div class="col-sm-5"><input type="text" class="form-control first_payment-input"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12"><div class="first_payment-slider"></div></div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="row">
+					<div class="col-sm-7"><p class="form-control-static">Сумма кредита, руб.</p></div>
+					<div class="col-sm-5"><input type="text" class="form-control credit_sum-input"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="credit_sum-slider"></div>
+						<p class="help-block"><span class="checkbox"><label><input type="checkbox" class="credit_sum-checkbox"> <small>Зафиксировать</small></label></span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="row">
+					<div class="col-sm-7"><p class="form-control-static">Срок кредита, мес</p></div>
+					<div class="col-sm-5"><input type="text" class="form-control credit_duration-input"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="credit_duration-slider"></div>
+						<p class="help-block"><span class="checkbox"><label><input type="checkbox" class="credit_duration-checkbox"> <small>Зафиксировать</small></label></span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="row">
+					<div class="col-sm-7"><p class="form-control-static">Ставка, %</p></div>
+					<div class="col-sm-5"><input type="text" class="form-control credit_rate-input"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12"><div class="credit_rate-slider"></div></div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="row">
+					<div class="col-sm-7"><p class="form-control-static">Ежемесячный платеж, руб.</p></div>
+					<div class="col-sm-5"><input type="text" class="form-control monthly_payment-input"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="monthly_payment-slider"></div>
+						<p class="help-block"><span class="checkbox"><label><input type="checkbox" class="monthly_payment-checkbox"> <small>Зафиксировать</small></label></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-8"><p>Калькулятор поможет вам рассчитать основные параметры.<br>Точные параметры вашего кредита будут рассчитаны банком по результатам рассмотрения вашей заявки.</p></div>
+		<div class="col-sm-4"><button class="btn btn-default btn-block">Оформить заявку</button></div>
+	</div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<!-- mortgage calc -->
+<script src="js/mortgageCalculator.js"></script>
+<!-- / mortgage calc -->
+
+<script>
+	$(function(){
+		$(".calc_init").mortgageCalculator();
+	});
+</script>
+
+</body>
+</html>
