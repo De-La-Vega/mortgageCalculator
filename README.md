@@ -16,7 +16,7 @@ $(function(){
 $(function(){
 	$(".calc_init").mortgageCalculator({
 	
-	    // Стоимость квартиры (руб.)
+	// Стоимость квартиры (руб.)
       flatPriceSlider          :     '.apartment_price-slider', // Слайдер
       flatPriceInput           :     '.apartment_price-input',  // Вывод значения
       flatPriceMin             :     1000000,  // От
