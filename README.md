@@ -12,10 +12,11 @@ $(function(){
 ```
 <br>
 Ниже запуск с доступными к изменению параметрами:
+
 ```javascript
 $(function(){
   $(".calc_init").mortgageCalculator({
-  
+
     // Стоимость квартиры (руб.)
     flatPriceSlider          :     '.apartment_price-slider', // Слайдер
     flatPriceInput           :     '.apartment_price-input',  // Вывод значения
